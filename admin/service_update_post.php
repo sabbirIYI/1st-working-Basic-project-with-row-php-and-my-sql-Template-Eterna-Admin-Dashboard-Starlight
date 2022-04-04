@@ -2,7 +2,8 @@
     session_start();
     require_once 'inc/db.php';
     
-    $id = $_POST['id'];
+   $id = $_POST['id'];
+
     $service_title = $_POST['service_title'];
     $service_details = $_POST['service_details'];
     $service_icon = $_POST['service_icon'];
@@ -29,7 +30,7 @@
      }
 
      if ($not_error) { 
-        $Update_query = "UPDATE service SET service_title ='$service_title', service_details ='$service_details', service_icon = '$service_icon' WHERE id ='$id '";
+        $Update_query = "UPDATE services SET service_title ='$service_title', service_details ='$service_details', service_icon = '$service_icon' WHERE id ='$id '";
         mysqli_query(connect_database(),  $Update_query);
 
         $_SESSION ['service_updated'] = "service Updated Successfully";

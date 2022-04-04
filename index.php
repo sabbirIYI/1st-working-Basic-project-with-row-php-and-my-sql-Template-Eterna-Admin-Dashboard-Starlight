@@ -10,23 +10,13 @@
         <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
         <div class="carousel-inner" role="listbox">
-           <!-- Slide 1 -->
-           <div class="carousel-item active" style="background: url(assets/img/slide/slide-1.jpg)">
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Eterna</span></h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
-              </div>
-            </div>
-          </div>
-
+          
         <?php
          foreach (database('banner') as $single_banner) {
         
           ?>
              <!-- Slide 1 -->
-          <div class="carousel-item" style="background: url(<?= $single_banner['img_location']?>)">
+          <div class="carousel-item <?php echo $single_banner['banner_status']?>" style="background: url(<?= $single_banner['img_location']?>)">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown"><?= $single_banner['banner_title']?> <span>Eterna</span></h2>

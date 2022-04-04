@@ -58,11 +58,11 @@
      if ($password == $confirm_password) {
          if ($not_error) { 
            $phone_number_count_query = "SELECT COUNT(*) AS phone_number FROM users WHERE phone_number = '$phone_number'";
-           if ( mysqli_fetch_assoc(mysqli_query($db_connect, $phone_number_count_query))['phone_number'] == 0) {
+           if ( mysqli_fetch_assoc(mysqli_query(connect_database(), $phone_number_count_query))['phone_number'] == 0) {
               $email_count_query = "SELECT COUNT(*) AS email FROM users WHERE email = '$email'";
-              if (mysqli_fetch_assoc(mysqli_query($db_connect, $email_count_query))['email'] == 0) {
+              if (mysqli_fetch_assoc(mysqli_query(connect_database(), $email_count_query))['email'] == 0) {
                 $insert_query = "INSERT INTO users (name,user_name,phone_number,email,password) VALUES ('$name','$user_name','$phone_number','$email','$password')";
-                mysqli_query($db_connect, $insert_query);
+                mysqli_query(connect_database(), $insert_query);
      
                 $_SESSION ['registration_added'] = "Registration Complect Successfully, Now you can log in";
      

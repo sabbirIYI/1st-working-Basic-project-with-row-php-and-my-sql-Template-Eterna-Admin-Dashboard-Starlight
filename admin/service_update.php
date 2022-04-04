@@ -1,7 +1,7 @@
 <?php
   require_once 'inc/d_header.php';
   
-  $id = $_GET['id'];
+   $id = $_GET['id'];
 
 ?>
    

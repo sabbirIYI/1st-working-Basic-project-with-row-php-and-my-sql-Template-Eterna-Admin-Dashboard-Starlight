@@ -77,7 +77,6 @@
           <li><a href="portfolio.php">Portfolio</a></li>
           <li><a href="team.php">Team</a></li>
           <li><a href="pricing.php">Pricing</a></li>
-          <li><a href="blog.php">Blog</a></li>
           <li><a href="contact.php">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

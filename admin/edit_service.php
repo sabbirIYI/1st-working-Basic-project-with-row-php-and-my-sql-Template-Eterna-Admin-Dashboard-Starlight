@@ -27,6 +27,7 @@
                          
                         ?>
                         <tr>
+
                             <td scope="row"><?= $key+1?></td>
                             <td><i class="<?= $single_service['service_icon']?> fa-2x"></i></td>
                             <td><?= $single_service['service_title']?></td>

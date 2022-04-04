@@ -17,8 +17,10 @@
                     <th>Banner Photo</th>
                     <th>Banner Title</th>
                     <th>Banner Details</th>
+                    <th>Status</th>
                     <th>Edit</th>
                     <th>Delete</th>
+                    <th>Active</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -31,8 +33,18 @@
                             <td><img class="img-fluid" src="../<?= $single_banner['img_location']?>" width="150" height="auto" alt="banner img"></td>
                             <td><?= $single_banner['banner_title']?></td>
                             <td><?= $single_banner['banner_details']?></td>
+                            <td><?= $single_banner['banner_status']?></td>
                             <td><a href="banner_update.php?id=<?= $single_banner['id']?>" class="btn btn-info btn-sm">Edit</a></td>
                             <td><button value="banner_delete.php?id=<?= $single_banner['id']?>" class="btn btn-danger btn-sm delete_btn">Delete</button></td>
+                            <?php
+                              if ($single_banner['banner_status'] == 'deactivate') {
+                              ?>
+                            <td><a href="banner_status.php?id=<?= $single_banner['id']?>" class="btn btn-info btn-sm">Active This</a></td>
+                              <?php
+                              }
+                            ?>
+                            
+                            
                         </tr>
                         <?php
                         }

@@ -1,5 +1,9 @@
 <?php
-  require_once 'admin/inc/db.php';
+
+use Carbon\Carbon;
+
+require_once 'admin/inc/db.php';
+  require_once 'vendor/autoload.php';
 ?>
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -87,7 +91,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Eterna</span></strong>. All Rights Reserved
+        &copy; Copyright<strong><span><?= Carbon:: now()->format('Y')?></span><span>Eterna</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->

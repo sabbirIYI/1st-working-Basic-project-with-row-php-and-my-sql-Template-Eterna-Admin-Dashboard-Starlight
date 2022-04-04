@@ -25,10 +25,10 @@
             $select_email_or_phone_query = "SELECT COUNT(*) AS single_user FROM users WHERE phone_number ='$email_or_phone_number' AND password ='$password'";
             $select_name_query = "SELECT name FROM users WHERE  phone_number ='$email_or_phone_number' AND password ='$password'";
          }
-         $user_from_db = mysqli_query($db_connect, $select_email_or_phone_query);
+         $user_from_db = mysqli_query(connect_database(), $select_email_or_phone_query);
          if (mysqli_fetch_assoc($user_from_db)['single_user'] == 1) {
             
-            $_SESSION[' '] = mysqli_fetch_assoc(mysqli_query($db_connect, $select_name_query))['name'];
+            $_SESSION[' '] = mysqli_fetch_assoc(mysqli_query(connect_database(), $select_name_query))['name'];
             $_SESSION['login_status'] = true;
 
             header('location:../index.php');

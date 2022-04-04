@@ -42,7 +42,7 @@
         header('location: edit_banner.php');
        
       }else{
-         header('location: edit_banner.php');
+         header('location: banner_update.php');
       }
    
 
